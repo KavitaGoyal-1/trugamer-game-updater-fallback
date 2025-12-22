@@ -29,12 +29,12 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 //prod cred:
-// const strapiUrl = process.env.PROD_STRAPI_URL;
-// const strapiToken = process.env.PROD_API_TOKEN;
+const strapiUrl = process.env.PROD_STRAPI_URL;
+const strapiToken = process.env.PROD_API_TOKEN;
 
 //stage cred:
-const strapiUrl = process.env.STAGE_STRAPI_URL;
-const strapiToken = process.env.STAGE_API_TOKEN;
+// const strapiUrl = process.env.STAGE_STRAPI_URL;
+// const strapiToken = process.env.STAGE_API_TOKEN;
 
 const TWITCH_AUTH_URL = "https://id.twitch.tv/oauth2/token";
 const IGDB_API_URL = "https://api.igdb.com/v4/games";
