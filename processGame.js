@@ -1238,6 +1238,14 @@ const updateOrCreateGameDataWithNewFeilds = async (dataObj, gameId) => {
   }
 };
 
+// Health check route
+app.get("/health", (req, res) => {
+  return res.status(200).json({
+    status: "ok",
+    message: "Server is running",
+  });
+});
+
 // POST route to receive game update requests from external service
 app.post("/update-game", async (req, res) => {
   try {
